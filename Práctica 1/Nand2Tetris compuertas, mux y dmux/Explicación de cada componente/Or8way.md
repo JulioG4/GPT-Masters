@@ -4,4 +4,4 @@ Para su tabla de verdad se debe tener en cuenta que su output será 1 siempre qu
 
 Su diagrama logico: 
 
-[![Captura-de-pantalla-2024-08-22-005329.png](https://i.postimg.cc/Zq7x62pK/Captura-de-pantalla-2024-08-22-005329.png)](https://postimg.cc/KKTT290d)
+[![Captura-de-pantalla-2024-08-22-005625.png](https://i.postimg.cc/6QmC8Rx8/Captura-de-pantalla-2024-08-22-005625.png)](https://postimg.cc/xkLX7XCQ)
