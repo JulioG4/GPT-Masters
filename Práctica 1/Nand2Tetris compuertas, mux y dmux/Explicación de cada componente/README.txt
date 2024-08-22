@@ -1,0 +1,1 @@
+En esta sección se explicará la programación realizada en HDL para cada compuerta, de forma teórica.
