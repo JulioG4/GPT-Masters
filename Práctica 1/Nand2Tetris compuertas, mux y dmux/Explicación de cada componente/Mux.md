@@ -1,4 +1,4 @@
-Este código representa el funcionamiento de un Multiplexor, tiene dos entradas "a" y "b", para su output selecciona una de las dos entradas 
+El código presentado en la carpeta HDL representa el funcionamiento de un Multiplexor, tiene dos entradas "a" y "b", para su output selecciona una de las dos entradas 
 en función de una señal de selección "sel"
 
 En este caso se muestra la tabla de verdad de un multiplexor 2 a 1
