@@ -1,1 +1,2 @@
 Este código representa el funcionamiento de un Multiplexor, tiene dos entradas "a" y "b", para su output selecciona una de las dos entradas en función de una señal de selección "sel"
+[![Multiplexor.jpg](https://i.postimg.cc/8z9fmGs5/Multiplexor.jpg)](https://postimg.cc/0zGN9LYR)
