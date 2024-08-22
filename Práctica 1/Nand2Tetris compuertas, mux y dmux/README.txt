@@ -1,0 +1,1 @@
+Esta parte de la práctica consistió en la programación, en lenguaje HDL, de distintas compuertas lógicas, multiplexores y demultiplexores, los cuales son componentes sumamente básicos dentro de la arquitectura de una computadora. La complejidad de la tarea se halló en que, para programar una compuerta, se podían utilizar únicamente las que se habían programado anteriormente.
