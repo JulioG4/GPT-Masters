@@ -1,7 +1,7 @@
 # GPT-Masters
 Grupo de Arquitectura de computadores (A2) 2024 - 2
 
-Integrantes:
+Integrantes:\n
 Jose Alejandro Gómez Vargas - 2220077
 Juan Jerónimo Jauregui Prince - 2220068
 Gabriel David Castillo Rodríguez - 2220089
