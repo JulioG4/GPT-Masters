@@ -8,6 +8,6 @@ Por lo tanto, al implementar dos multiplexores 8 a 1 se debe tener en cuenta que
 
 Sus compuertas logicas son NOT, AND y OR. El multiplexor 8 a 1 contiene 3 compuertas NOT, 8 compuertas AND y 1 compuerta OR. El multiplexor 2 a 1 tiene 1 compuerta NOT, 2 compuetas AND y 1 OR. Al tener dos multplexores de 8 a 1, y el multiplexor 2 a 1 se tiene un total: 4 compuertas NOT (señales de seleccion), 18 compuertas AND, y 3 compuertas OR. 
 
-[![mux166.png](https://i.postimg.cc/4x3GWHj4/mux166.png)](https://postimg.cc/JGSSn01S)
+[![MUX2.png](https://i.postimg.cc/mDf0WPpH/MUX2.png)](https://postimg.cc/94bxGQhm)
 
 [![Mux160.png](https://i.postimg.cc/YqrBSmrN/Mux160.png)](https://postimg.cc/3WccSNDW)
