@@ -1,0 +1,6 @@
+CHIP Mux8Way16 
+
+Mismo concepto que el chip Mux4way16.
+dividimos el prblema y usamos lo que sabemos para resolveen este caso tenemos 8 canales y un selector de tamaño 3
+Como son 8 canales dividimos el problema en dos de 4 canales, y aplicamos un Mux416, usando el indice 0 y 1 del selector.
+Después aplicamos un Muxpara reducir de dos canales a uno, usando el indice numero 2 del selector.

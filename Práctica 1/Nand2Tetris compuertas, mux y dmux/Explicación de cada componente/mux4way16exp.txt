@@ -1,0 +1,10 @@
+HIP Mux4Way16 
+
+Tiene el mismo concepto del Mux normal, solo que ahora tenemos 4 canales que a cada uno le llegan variables de 16 bits.
+
+para resolverlo descomponemos el problema y utilizamos lo que ya sabemos.
+
+Como tengo 4 canales yo los puedo separar en grupos de a dos, y esos grupos los resuelvo individualmente con un chip "mux" propio, lo que me llevaria a tener 2 mux.
+ Uno para el canal "A" y "B", y otro para el canal "C" y "D".También necesitamos tener un selector de 2 bits, para poder jugar con sus combinaciones. En los dos primeros mux utilizamos el primer indice del selector.
+ Después de eso quedamos solo con dos posibles canales, por lo que aplicamos otro mux, para que nos quede el canal deseado, en este caso utilizamos el segundo indice del selector,dandonos así la combinación para el canal deseado.
+La salida son los mismos bits que entraron por el canal elegido.

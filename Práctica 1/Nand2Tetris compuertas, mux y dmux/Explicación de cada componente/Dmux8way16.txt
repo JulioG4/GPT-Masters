@@ -1,0 +1,7 @@
+Dmux8way16
+
+8 canales, mismo concepto que la Dmux4way16.
+Necesito: un selector con 3 bits, 2 chips Dmux4way16 y 1 chip Dmux.
+Primero se pasa la entrada por el chip Dmux y con la combinación del selector pasamos a los dos grupos de 4 canales.
+Despúes utilizamos 2 chips Dmux4way16 con los indices 0 y 1 del selector para elborar las combinaciones.
+ El resultado de las operaciones va a ser el canal elegido.
