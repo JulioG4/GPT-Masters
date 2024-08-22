@@ -1,4 +1,4 @@
-Mismo Mux, pero al revez
+Mismo Mux, pero al revés. 
 
 Vamos a tener como entrada la antigua salida del Mux, y vamos a averiguar de que canal salió, Solo necesito 3 chips Dmux.
 Primero usa un Dmux con un señalador de 2 bits, en el primero se usa el indice 2 del señalador,
