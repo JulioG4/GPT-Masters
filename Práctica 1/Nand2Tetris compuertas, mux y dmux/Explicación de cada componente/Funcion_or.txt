@@ -1,0 +1,5 @@
+Primero crearemos la primera NAND que recibirá las entradas que son A,B, pero vamos a duplicarlas. Eso nos va a arrojar un resultado C y D, que luego vamos a combinar con NAND quedando Z.
+
+NAND 1 IN A,A OUT C
+NAND 2 IN B,B OUT D
+ULTIMA  NAND 3 IN C,D OUT X   VALOR OUT SALIDA OR

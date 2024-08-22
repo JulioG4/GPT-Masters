@@ -1,0 +1,10 @@
+Primero crearemos la primera NAND que recibirá las entradas que son A,B, pero vamos a duplicarlas. Eso nos va a arrojar un resultado C y D, que luego vamos a combinar con NAND quedando Z.
+
+NAND 1 IN A,A OUT C
+NAND 2 IN B,B OUT D
+ULTIMA  NAND 3 IN C,D OUT X   VALOR OUT SALIDA OR
+
+
+
+Para hacerlo con 16 entradas lo que tenemos que hacer es que partimos en subgrupos de 4 OR, y comenzamos a meter los valores A y B en el primer OR dejando Z como OUT; Será la primera
+entrada de la segunda OR que luego se combina con C para dar la salida X, que luego se tomará como entrada de la tercera OR junto a D. En este paso, se obtiene el resultado final y se repite el proceso agrupando todas en grupos de 4 de manera que queden solamente 4 salidas finales despues de simplificar las 16, y de ahí aplicar de nuevo.

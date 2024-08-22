@@ -1,0 +1,9 @@
+Primero crearemos la primera NAND que recibirá las entradas que son A,B. Eso nos va a arrojar un resultado C, que luego vamos a combinar con A y B quedando Z y X . A estas
+últimas variables se las introduce en otra NAND, cuya salida será la XOR.
+
+NAND 1 IN A,B OUT C
+NAND 2 IN A,C OUT Z
+NAND 3 IN B,C OUT X
+ULTIMA NAND IN X,Z OUT Xor valor
+
+Es curioso que para este caso no se requería el uso de la compuerta not, si no que se logró hacer solo con NAND's.

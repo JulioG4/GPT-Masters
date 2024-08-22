@@ -1,0 +1,10 @@
+Para el funcionamiento de la not,se hace de cuenta que se deja la entrada y siempre como 1, y dejamos la entrada x variable como la entrada de la compuerta.Entonces la lógica sería progamar el chip de manera que
+
+ X= INPUT
+
+ Y=1   
+OUT= 1 si X=0, 
+0 si X=1
+
+porque recordemos que la NAND solo  tiene una condición de salida 0 cuando ambas entradas son iguales, por lo que es perfecta para esta compuerta porque  solo con variar un valor y dejar el otro fijo logramos simular la NOT con una NAND.
+

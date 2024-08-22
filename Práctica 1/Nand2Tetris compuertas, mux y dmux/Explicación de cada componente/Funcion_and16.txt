@@ -1,0 +1,13 @@
+Necesitamos invertir la salida de la primera compuerta NAND para obtener la función AND. Esto lo sacamos conectando la salida Z a ambas entradas de una segunda compuerta NAND. La salida OUT
+general  será NAND(Z, Z), que actúa como una compuerta NOT, invirtiendo el valor de Z.En términos, simplemente es usar la compuerta NOT creada para invertir el resultado de la NAND,y por ende obtenemos AND.
+
+
+IN X,Y NAND  SERÁN LOS INPUT
+Z SERA SALIDA NAND
+Z SERA INPUT DE NOT
+-Z SERA SALIDA DE NOT
+
+
+
+Para hacerlo con 16 entradas lo que tenemos que hacer es que partimos en subgrupos de 4 AND, y comenzamos a meter los valores A y B en el primer AND dejando Z como OUT; Será la primera
+entrada de la segunda AND que luego se combina con C para dar la salida X, que luego se tomará como entrada de la tercera AND junto a D. En este paso, se obtiene el resultado final y se repite el proceso agrupando todas en grupos de 4 de manera que queden solamente 4 salidas finales despues de simplificar las 16, y de ahí aplicar de nuevo.
