@@ -6,7 +6,7 @@ Se debe tener en cuenta que el multiplexor de 16 a 1 como tal no existe como int
 
 Por lo tanto, al implementar dos multiplexores 8 a 1 se debe tener en cuenta que ellos operan con tres señales de seleccion, "S0","S1" y "S2", esto no significa que vayan a tener seis señales de seleccion, por el contrario se usan esas mismas tres señales para los dos multpilexores 8 a 1; no hay que olvidar el multiplexor 2 a 1 que contiene la cuarta señal "S3", de ese modo en total el Mux 16 a 1 trabaja con cuatro señales de seleccion. 
 
-Sus compuertas logicas son NOT, AND y OR. El multiplexor 8 a 1 contiene 3 compuertas NOT, 8 compuertas AND y 1 compuerta OR. El multiplexor 2 a 1 tiene 1 compuerta NOT, 2 compuetas AND y 1 OR. Al tener dos multplexores de 8 a 1, y el multiplexor 2 a 1 se tiene un total: 4 compuertas NOT (señales de seleccion), 18 compuertas AND, y 3 compuertas OR. 
+Sus compuertas logicas son NOT, AND y OR. El multiplexor 8 a 1 contiene 3 compuertas NOT, 8 compuertas AND y 1 compuerta OR. El multiplexor 2 a 1 tiene 1 compuerta NOT, 2 compuetas AND y 1 compuerta OR. Al tener dos multplexores de 8 a 1, y el multiplexor 2 a 1 se tiene un total: 4 compuertas NOT (señales de seleccion), 18 compuertas AND, y 3 compuertas OR. 
 
 [![MUX2.png](https://i.postimg.cc/mDf0WPpH/MUX2.png)](https://postimg.cc/94bxGQhm)
 
