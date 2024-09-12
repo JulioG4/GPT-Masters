@@ -1,0 +1,18 @@
+
+/**
+ * Computes the sum of two bits.
+ */
+CHIP HalfAdder {
+    IN a, b;    // 1-bit inputs
+    OUT sum,    // Right bit of a + b 
+        carry;  // Left bit of a + b
+
+    PARTS:
+   Xor(a =a, b =b , out =sum );
+   And(a=a, b=b , out=carry );
+    //El ciruito es un medio sumador
+   //Cuando sumamos dos bit en binario
+   //La suma es lo que vamos poniendo 
+   //El carry es lo que guardamos en la parte superior
+
+}
