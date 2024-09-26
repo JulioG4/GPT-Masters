@@ -1,0 +1,13 @@
+
+CHIP Memory{
+IN in[16],load,address[15];
+OUT out[16];
+PARTS:
+And16(a[0..14]=address,a[15]=true,b=true,out=nop1,out[13..14]=memSel,out[0..13]=direccionRAM,out[0..12]=pantallaHEX);
+DMux4Way(in=load,sel=memSel,a=loadRAM1,b=cargarRAM,c=loadScreen,d=nop2);
+Or(a=loadRAM1,b=cargarRAM,out=loadRAM);
+RAM16K(in=in,load=loadRAM,address=direccionRAM,out=outRAM);
+Screen(in=in,load=loadScreen,address=pantallaHEX,out=outScreen);
+Keyboard(out=outKeyboard);
+Mux4Way16(a=outRAM,b=outRAM,c=outScreen,d=outKeyboard,sel=memSel,out=out);
+}

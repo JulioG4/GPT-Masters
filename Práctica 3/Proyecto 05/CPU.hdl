@@ -1,0 +1,43 @@
+
+
+CHIP CPU {
+    IN  inM[16], instruction[16], reset;
+    OUT outM[16], writeM, addressM[15], pc[15];
+    PARTS:
+    And16(a=instruction, b=true, out=nop1, out[15]=CODIGOOP, out[12]=instA, out[6..11]=instC, out[3..5]=instD, out[0..2]=instJ);
+    And16(a[0..5]=instC, a[6..15]=true, b=true, out=nop2, out[5]=zx, out[4]=nx, out[3]=zy, out[2]=ny, out[1]=f, out[0]=no);
+    And16(a[0..2]=instD, a[3..15]=true, b=true, out=nop3, out[0]=tryStoreM, out[1]=tryStoreD, out[2]=memorizarA);
+    Mux16(a=instruction, b=outALU, sel=CODIGOOP, out=inAReg);
+    Not(in=CODIGOOP, out=ainst);
+    Or(a=ainst, b=memorizarA, out=cargarA);
+    ARegister(in=inAReg, load=cargarA, out=outAReg);
+    And(a=tryStoreD, b=CODIGOOP, out=loadD);
+    DRegister(in=outALU, load=loadD, out=outDReg, out=xALU);
+    Mux16(a=outAReg, b=inM, sel=instA, out=yALU);
+    ALU(x=xALU, y=yALU, zx=zx, nx=nx, zy=zy, ny=ny, f=f, no=no, out=outALU, zr=zr, ng=ng);
+    DMux8Way(in=true, sel=instJ, a=noJMP, b=JGT, c=JEQ, d=JGE, e=JLT, f=JNE, g=JLE, h=uncJMP);
+    Not(in=zr, out=COMPUERTNOT);
+    Not(in=ng, out=NOTNEGADA);
+    And(a=COMPUERTNOT, b=NOTNEGADA, out=CONTROLH);
+    And(a=COMPUERTNOT, b=ng, out=negativeOut);
+    And(a=zr, b=NOTNEGADA, out=zeroOut);
+    And(a=CONTROLH, b=true, out=GT);
+    And(a=zeroOut, b=true, out=EQ);
+    And(a=negativeOut, b=true, out=LT);
+    Or(a=GT, b=EQ, out=GE);
+    Or(a=GT, b=LT, out=NE);
+    Or(a=LT, b=EQ, out=LE);
+    And(a=JGT, b=GT, out=jmpGT);
+    And(a=JEQ, b=EQ, out=jmpEQ);
+    And(a=JGE, b=GE, out=jmpGE);
+    And(a=JLT, b=LT, out=jmpLT);
+    And(a=JNE, b=NE, out=jmpNE);
+    And(a=JLE, b=LE, out=jmpLE);
+    Or8Way(in[0]=false, in[1]=jmpGT, in[2]=jmpEQ, in[3]=jmpGE, in[4]=jmpLT, in[5]=jmpNE, in[6]=jmpLE, in[7]=uncJMP, out=tryJMP);
+    And(a=tryJMP, b=CODIGOOP, out=loadPC);
+    PC(in=outAReg, load=loadPC, inc=true, reset=reset, out=oldPC);
+    And16(a=outALU, b=true, out=outM);
+    And(a=tryStoreM, b=CODIGOOP, out=writeM);
+    And16(a=outAReg, b=true, out=nop4, out[0..14]=addressM);
+    And16(a=oldPC, b=true, out=nop5, out[0..14]=pc);
+}
