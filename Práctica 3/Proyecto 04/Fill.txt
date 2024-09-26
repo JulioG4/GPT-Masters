@@ -1,1 +1,13 @@
+El código del documento Fill.asm opera realizando una verificacion continua de la entrada del teclado y dibuja en la pantalla segun, dicha entrada. 
+Primero se configuran dos valores: 22868 y 22867. Que se guardan en las variables keyboard y current.
+
+El código entra en un ciclo.
+Primero verifica el estado del teclado, si detecta una tecla presionada entonces almacena -1 en fillvalue,
+lo que representa un pixel lleno. De no haber ninguna tecla presionada, guarda cero en fillvalue que representa un pixel vacio.
+
+Posteriormente dibuja en la pantalla; carga el valor de fillvalue y lo coloca en la posicion actual de la pantalla, indicada por current.
+Luego compara el valor de current con la direccion de la base; 16384. Para asegurarse de que siga dentro de los limites de la pantalla.
+Si current es mayor que la direccion, entonces regresa nuevamente al ciclo de verificaion del teclado.
+
+Por ultimo, el codigo decrementa el valor de current para cambiar la posicion en la pantalla donde se dibujara la siguiente iteracion, y repite el proceso.
 
