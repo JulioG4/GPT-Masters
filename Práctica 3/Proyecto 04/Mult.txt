@@ -1,8 +1,14 @@
 El código en el documento Mult.asm funaciona operando una suma; una cantidad de veces igual al valor inicial. 
 
-El código carga el primer valor a @R1 que funciona como contador, luego lo almacena en D. Se verifica si el valor es cero, en caso de serlo, se pasa a la etiqueta @END y termina. En caso de no serlo, continua con el bucle.
+El código carga el primer valor a @R1 que funciona como contador, luego lo almacena en D. 
+Se verifica si el valor es cero, en caso de serlo, se pasa a la etiqueta @END y termina. 
+En caso de no serlo, continua con el bucle.
 
-La siguiente parte del bucle, es en @R0, que puede ser un valor inicial en el registro D. Si el valor de @R0 no es cero, pasa a @END y el codigo termina. Sino, toma el valor de @R0 y lo suma al valor actual de @R2, que se encarga de almacenar el resultado total de las sumas. 
+La siguiente parte del bucle, es en @R0, que puede ser un valor inicial en el registro D. 
+Si el valor de @R0 no es cero, pasa a @END y el codigo termina. 
+Sino, toma el valor de @R0 y lo suma al valor actual de @R2, que se encarga de almacenar el resultado total de las sumas. 
 
-Finalmente el codigo decrementa el valor en @R1. Si @R1 es mayo que cero, regresa al inicio y repite el bucle co (LOOP). Por el contrario si @R1 ha llegado a cero, el bucle termina el programa y pasa a la etiqueta @END.
+Finalmente el codigo decrementa el valor en @R1. 
+Si @R1 es mayo que cero, regresa al inicio y repite el bucle co (LOOP). 
+Por el contrario si @R1 ha llegado a cero, el bucle termina el programa y pasa a la etiqueta @END.
 
