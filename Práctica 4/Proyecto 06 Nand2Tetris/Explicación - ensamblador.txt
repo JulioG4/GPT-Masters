@@ -1,11 +1,11 @@
 El archivo Assembler.sh convierte los archivos .asm en archivos .hack, toma las instrucciones escritas en 
 el archivo .asm y las convierte a binario para despues escribir ese resultado en un archivo .hack.
 
-El ensamblador se puede iniciar en modo interactivo, donde escribo las instrucciones en el mismo programa,
+El ensamblador se puede iniciar en modo interactivo, donde escribimos las instrucciones en el mismo programa,
 o también se puede introducir un archivo especifico. Para el archivo especifico necesitamos proporcianar la ruta 
 del mismo.
 
-luego de que las instrucciones se pasen a binario en el archivo .hack las ponemos en el CPU emulator
+Luego de que las instrucciones se pasen a binario en el archivo .hack las ponemos en el CPU emulator
 
 Nuestro ensamblador en python tiene la misma función, usamos 1 diccionario y dos tablas
 
